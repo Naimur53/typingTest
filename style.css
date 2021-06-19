@@ -1,0 +1,22 @@
+body{
+    background-color: #323437;
+    color: white;
+    font-size: 18px;
+    padding: 0 100px;
+}
+.typing-aria{
+    display: flex;
+    justify-content: center;
+}
+textarea{
+    resize: none;   
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    color:#e2b714;
+    border-radius: 5px; 
+
+}
+textarea:focus-visible{ 
+    border-color:#e2b714 ;
+}
