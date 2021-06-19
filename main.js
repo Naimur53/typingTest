@@ -1,21 +1,15 @@
  
 
 const paragraph = document.getElementById("paragraph").innerText;
-var start;
+var start; 
+var wrong = 0;
  
 document.getElementById("user-text").addEventListener("input", function () {
     const input = document.getElementById("user-text").value;
     if(input.length == 1){
         start = new Date().getTime();  
        }
-    if (input.length == paragraph.length) {
-        console.log("done");
-        var end = new Date().getTime();
-        var time = end - start;
-        time = time / 1000;
-        console.log('Execution time: ' + time);
-       
-    }
+   
     else {
 
         let text = '';
@@ -31,10 +25,23 @@ document.getElementById("user-text").addEventListener("input", function () {
         }
         else {
             this.style.color = "red";
+            wrong++;
         }
         console.log("input", input);
 
        
+    }
+    if (input.length == paragraph.length) {
+        console.log("done");
+        var end = new Date().getTime();
+        var time = end - start;
+        time = time / 1000;
+        console.log("wrong",wrong)
+        wrong = (wrong/5)/(1/time);
+        const speed = ((input.length/5)-wrong)/(1/time);
+        console.log('speed',speed);
+        console.log('Execution time: ' + time);
+        document.getElementById("user-text").value = ""; 
     }
   
 })

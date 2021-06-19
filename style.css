@@ -4,6 +4,9 @@ body{
     font-size: 18px;
     padding: 0 100px;
 }
+.paragraph-container{
+    text-align: center;
+}
 .typing-aria{
     display: flex;
     justify-content: center;
