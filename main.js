@@ -36,8 +36,8 @@ document.getElementById("user-text").addEventListener("input", function () {
         var end = new Date().getTime();
         var time = end - start;
         time = time / 1000;
-        console.log("wrong",wrong)
-        wrong = (wrong/5)/(1/time);
+        console.log("wrong",wrong);
+        wrong = (wrong/5);
         const speed = ((input.length/5)-wrong)/(1/time);
         console.log('speed',speed);
         console.log('Execution time: ' + time);
